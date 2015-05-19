@@ -4,14 +4,19 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="I am a starry-eyed dreamer. The following is my document.">
+    <meta name="description" content="I am a starry-eyed dreamer. The following is my documents.">
     <meta name="author" content="Akihiro Kuroiwa">
     <!-- <link rel="icon" href="../../favicon.ico"> -->
 
     <title>Akihiro Kuroiwa's Home Page</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootswatch Spacelab -->
+<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.4/spacelab/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="offcanvas.css" rel="stylesheet">
@@ -51,14 +56,30 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-		<li><a href="https://www.facebook.com/akihiro.kuroiwa">Facebook</a></li>
-		<li><a href="https://twitter.com/akuroiwa">Twitter</a></li>
-		<li><a href="https://launchpad.net/~akuroiwa">Launchpad</a></li>
+		<li>
+		  <a href="https://www.facebook.com/akihiro.kuroiwa" target="_blank">
+		    <i class="fa fa-facebook-official fa-fw"></i>
+		    &nbsp; Facebook
+		  </a>
+		</li>
+		<li>
+		  <a href="https://twitter.com/akuroiwa" target="_blank">
+		    <i class="fa fa-twitter fa-fw"></i>
+		    &nbsp; Twitter
+		  </a>
+		</li>
+		<li>
+		  <a href="https://www.youtube.com/channel/UChqRXAq0z5ZqPnFj8GdMsEQ" target="_blank">
+		    <i class="fa fa-youtube fa-fw"></i>
+		    &nbsp; YouTube
+		  </a>
+		</li>
+		<li><a href="https://launchpad.net/~akuroiwa" target="_blank">Launchpad</a></li>
                 <!-- <li><a href="#">Another action</a></li> -->
                 <!-- <li><a href="#">Something else here</a></li> -->
                 <li class="divider"></li>
                 <li class="dropdown-header">Japanese Site</li>
-		<li><a href="http://slashdot.jp/~finedaypicnic">Slashdot Japan</a></li>
+		<li><a href="http://srad.jp/~finedaypicnic" target="_blank">srad.jp</a></li>
                 <!-- <li><a href="#">Separated link</a></li> -->
                 <!-- <li><a href="#">One more separated link</a></li> -->
               </ul>
@@ -66,7 +87,33 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Language <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+		<i class="fa fa-search fa-fw"></i>
+		<span class="caret"></span>
+	      </a>
+              <ul class="dropdown-menu" role="menu">
+		<li>
+		  <!-- google CSE -->
+		  <form action="http://www.google.com" id="cse-search-box" target="_blank" class="navbar-form" role="search">
+		    <div>
+		      <input type="hidden" name="cx" value="partner-pub-3202635778478035:2794236894" />
+		      <input type="hidden" name="ie" value="UTF-8" />
+		      <input type="text" name="q" size="55" class="form-control" />
+		      <input type="submit" name="sa" value="Search" class="btn btn-primary" />
+		    </div>
+		  </form>
+
+		  <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+		  <!-- End of CSE -->
+		</li>
+              </ul>
+	    </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+		<i class="fa fa-language fa-fw"></i>
+		Language <span class="caret">
+		</span>
+	      </a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="./index-ja.html">Japanese</a></li>
               </ul>
@@ -86,7 +133,7 @@
           </p>
           <div class="jumbotron">
             <h1>Hello, world!</h1>
-	    <p>I am a starry-eyed dreamer. The following is my document.</p>
+	    <p>I am a starry-eyed dreamer. The following is my documents.</p>
           </div>
           <div class="row">
 	    <a name="usip"></a>
@@ -100,7 +147,20 @@
 	      <p>Label creator for Debian CD/DVD and Ubuntu CD/DVD.</p>
 	      <p>Please download tarball if you want to get labels to create Debian official CD/DVD.</p>
               <p><a class="btn btn-default" href="./en/many-labels/html/index.html" target=”_blank” role="button">View details &raquo;</a></p>
-              <p><a class="btn btn-default" href="./en/many-labels/debian-CD-labels.tar.gz" role="button">Download tarball &raquo;</a></p>
+              <p>
+		<a class="btn btn-default" href="./en/many-labels/debian-CD-labels.tar.gz" role="button">
+		  <i class="fa fa-download fa-fw"></i>
+		  Download tarball &raquo;</a>
+	      </p>
+            </div><!--/span-->
+            <div class="col-6 col-sm-6 col-lg-4">
+              <h2>Wara-yaki mikan</h2>
+	      <p>An <a href="https://en.wikipedia.org/wiki/Izakaya" target="_blank">izakaya</a> in Fukuoka city.</p>
+              <p>
+		<a class="btn btn-default" href="https://goo.gl/maps/PzNiR" target="_blank" role="button">
+		  <i class="fa fa-map-marker fa-fw">
+		  </i>Google Maps &raquo;</a>
+	      </p>
             </div><!--/span-->
             <div class="col-6 col-sm-6 col-lg-4">
               <h2>Advertisement</h2>
@@ -125,29 +185,23 @@
 
         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
           <div class="list-group">
-	    <!-- google CSE -->
-	    <form action="http://www.google.com" id="cse-search-box" target="_blank">
-	      <div>
-		<input type="hidden" name="cx" value="partner-pub-3202635778478035:2794236894" />
-		<input type="hidden" name="ie" value="UTF-8" />
-		<input type="text" name="q" size="55" />
-		<input type="submit" name="sa" value="Search" />
-	      </div>
-	    </form>
-
-	    <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
-	    <!-- End of CSE -->
             <a href="./en/usip/index.html" target="_blank" class="list-group-item active">Draft for USIP</a>
             <a href="./en/many-labels/html/index.html" target="_blank" class="list-group-item active">many-labels</a>
             <!-- <a href="#" class="list-group-item">Link</a> -->
             <!-- <a href="#" class="list-group-item">Link</a> -->
-            <!-- <a href="#" class="list-group-item">Link</a> -->
-            <!-- <a href="#" class="list-group-item">Link</a> -->
-            <!-- <a href="#" class="list-group-item">Link</a> -->
-            <!-- <a href="#" class="list-group-item">Link</a> -->
-            <!-- <a href="#" class="list-group-item">Link</a> -->
-            <!-- <a href="#" class="list-group-item">Link</a> -->
-            <!-- <a href="#" class="list-group-item">Link</a> -->
+	    <hr>
+	    <!-- google ad -->
+	    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	    <!-- responsive -->
+	    <ins class="adsbygoogle"
+		 style="display:block"
+		 data-ad-client="ca-pub-3202635778478035"
+		 data-ad-slot="4977272093"
+		 data-ad-format="auto"></ins>
+	    <script>
+	      (adsbygoogle = window.adsbygoogle || []).push({});
+	    </script>
+	    <!-- end of google ad -->
           </div>
         </div><!--/span-->
       </div><!--/row-->
@@ -156,6 +210,7 @@
 
       <footer>
         <p>&copy; <a href="https://www.facebook.com/akihiro.kuroiwa">Akihiro Kuroiwa</a> 2015</p>
+	<p>Thanks to <a href="http://www.bootstrapcdn.com/#fontawesome_tab" target="_blank">BootstrapCDN for Font Awesome</a> and <a href="http://www.bootstrapcdn.com/#bootswatch_tab" target="_blank">Bootswatch.</a></p>
       </footer>
 
     </div><!--/.container-->
@@ -166,7 +221,8 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <!-- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="offcanvas.js"></script>
   </body>
 </html>

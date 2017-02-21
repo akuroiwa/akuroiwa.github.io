@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Welcome to many-labels’s documentation! &mdash; many-labels 0.0.1 pre-alpha 1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1 pre-alpha 1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="many-labels 0.0.1 pre-alpha 1 documentation" href="#" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li><a href="#">many-labels 0.0.1 pre-alpha 1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="welcome-to-many-labels-s-documentation">
+<h1>Welcome to many-labels&#8217;s documentation!<a class="headerlink" href="#welcome-to-many-labels-s-documentation" title="Permalink to this headline">¶</a></h1>
+<p>Contents:</p>
+<div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><em>Index</em></a></li>
+<li><a class="reference internal" href="py-modindex.html"><em>Module Index</em></a></li>
+<li><a class="reference internal" href="search.html"><em>Search Page</em></a></li>
+</ul>
+</div>
+<div class="section" id="labels-for-debian-cds-and-dvds">
+<h1>Labels for Debian CDs and DVDs<a class="headerlink" href="#labels-for-debian-cds-and-dvds" title="Permalink to this headline">¶</a></h1>
+<p>There are so many CDs of Debian, it takes a frustratingly long time to
+create their
+labels!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</p>
+<p>I named my makefile script &#8220;many-labels&#8221; in gratitude and
+sardonically. Before cursing Debian CD Group, let&#8217;s try this
+script. Have a coffee break, take a deep breath, and relax.</p>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>Please prepare debian installed computer.</p>
+<div class="highlight-python"><div class="highlight"><pre>su -
+(sudo -H -s as Ubuntu user)
+aptitude install bzr make inkscape
+exit
+bzr branch lp:many-labels
+</pre></div>
+</div>
+<p>If you already download it, execute the following.</p>
+<div class="highlight-python"><div class="highlight"><pre>cd many-labels
+bzr pull lp:many-labels
+</pre></div>
+</div>
+</div>
+<div class="section" id="preparation">
+<h2>Preparation<a class="headerlink" href="#preparation" title="Permalink to this headline">¶</a></h2>
+<p>Create your own SVG file named as &#8220;many-labels/image-factory/debian.svg&#8221;,
+add these strings to &#8220;debian.svg&#8221; and comment out them:</p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;!--VERSION--&gt;
+&lt;!--CODENAME--&gt;
+&lt;!--ARCHITECTURE--&gt;
+&lt;!--MEDIA--&gt;
+&lt;!--MEDIA_NUM--&gt;
+</pre></div>
+</div>
+<p>They will be replaced as follows:</p>
+<div class="highlight-python"><div class="highlight"><pre>8.0.0
+Jessie
+amd64
+CD
+Disc 85
+</pre></div>
+</div>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>Please choose from the following options:</p>
+<div class="highlight-python"><div class="highlight"><pre>cd many-labels/
+make all
+make translations
+make translations VERSION=5.0.7 CODE_NAME=Lenny
+(If you want to create ubuntu labels for Japanese remix)
+make translations LNG=ja
+(If you want to create tarball)
+make create-tarball
+(If you want to remove labels)
+make clean
+</pre></div>
+</div>
+<p>If you want to create labels for every architecture, edit Makefile like this:</p>
+<div class="highlight-python"><div class="highlight"><pre>ARCHS := $(shell sed -e &quot;/^\#/d&quot; ./ARCHS)
+# ARCHS = amd64 i386 end
+</pre></div>
+</div>
+</div>
+<div class="section" id="lightscribe-labeler">
+<h2>LightScribe Labeler<a class="headerlink" href="#lightscribe-labeler" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://www.lacie.com/">LACIE</a></p>
+<p>Install LightScribe Host Software at first!!!
+Next, install LaCie LightScribe Labeler.</p>
+<div class="highlight-python"><div class="highlight"><pre>su -
+aptitude install alien
+mv LaCie\ LightScribe\ Labeler\ version\ Linux.rpm \
+LaCie-LightScribe-Labeler-version-Linux.rpm
+alien LaCie-LightScribe-Labeler-version-Linux.rpm
+dpkg --install LaCie-LightScribe-Labeler-version-Linux.deb
+4L-gui many-labels/label/architecture/media/filename.png
+</pre></div>
+</div>
+</div>
+<div class="section" id="license-of-logos-and-trademarks">
+<h2>License of logos and trademarks<a class="headerlink" href="#license-of-logos-and-trademarks" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://www.debian.org/logos/">Debian</a></div>
+<div class="line"><a class="reference external" href="https://wiki.ubuntu.com/Artwork/Official">Ubuntu</a></div>
+</div>
+</div>
+<div class="section" id="todo">
+<h2>TODO<a class="headerlink" href="#todo" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">I don&#8217;t know why make command is interrupted when the last target is executed.</p>
+</div>
+</div>
+<div class="section" id="about-this-document">
+<h2>About this document<a class="headerlink" href="#about-this-document" title="Permalink to this headline">¶</a></h2>
+<p>This README was written in reStructuredText(reST).</p>
+<div class="line-block">
+<div class="line"><a class="reference external" href="http://sphinx-doc.org/">SPHINX</a></div>
+<div class="line"><a class="reference external" href="https://launchpad.net/many-labels">Project page</a></div>
+<div class="line"><a class="reference external" href="http://akuroiwa.env-reform.com/">Please visit my home page</a></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Welcome to many-labels&#8217;s documentation!</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+<li><a class="reference internal" href="#labels-for-debian-cds-and-dvds">Labels for Debian CDs and DVDs</a><ul>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#preparation">Preparation</a></li>
+<li><a class="reference internal" href="#usage">Usage</a></li>
+<li><a class="reference internal" href="#lightscribe-labeler">LightScribe Labeler</a></li>
+<li><a class="reference internal" href="#license-of-logos-and-trademarks">License of logos and trademarks</a></li>
+<li><a class="reference internal" href="#todo">TODO</a></li>
+<li><a class="reference internal" href="#about-this-document">About this document</a></li>
+</ul>
+</li>
+</ul>
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/index.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li><a href="#">many-labels 0.0.1 pre-alpha 1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, Akihiro Kuroiwa.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

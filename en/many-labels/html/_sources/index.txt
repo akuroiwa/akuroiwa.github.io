@@ -1,0 +1,140 @@
+.. many-labels documentation master file, created by
+   sphinx-quickstart on Mon Apr 13 16:36:59 2015.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to many-labels's documentation!
+=======================================
+
+Contents:
+
+.. toctree::
+   :maxdepth: 2
+
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+
+
+Labels for Debian CDs and DVDs
+==============================
+
+There are so many CDs of Debian, it takes a frustratingly long time to
+create their
+labels!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+I named my makefile script "many-labels" in gratitude and
+sardonically. Before cursing Debian CD Group, let's try this
+script. Have a coffee break, take a deep breath, and relax.
+
+
+Installation
+------------
+
+Please prepare debian installed computer.
+::
+
+   su -
+   (sudo -H -s as Ubuntu user)
+   aptitude install bzr make inkscape
+   exit
+   bzr branch lp:many-labels
+
+If you already download it, execute the following.
+::
+
+   cd many-labels
+   bzr pull lp:many-labels
+
+
+Preparation
+-----------
+
+Create your own SVG file named as "many-labels/image-factory/debian.svg",
+add these strings to "debian.svg" and comment out them:
+::
+
+   <!--VERSION-->
+   <!--CODENAME-->
+   <!--ARCHITECTURE-->
+   <!--MEDIA-->
+   <!--MEDIA_NUM-->
+
+They will be replaced as follows:
+::
+
+   8.0.0
+   Jessie
+   amd64
+   CD
+   Disc 85
+
+
+Usage
+-----
+
+Please choose from the following options:
+::
+
+   cd many-labels/
+   make all
+   make translations
+   make translations VERSION=5.0.7 CODE_NAME=Lenny
+   (If you want to create ubuntu labels for Japanese remix)
+   make translations LNG=ja
+   (If you want to create tarball)
+   make create-tarball
+   (If you want to remove labels)
+   make clean
+
+If you want to create labels for every architecture, edit Makefile like this:
+::
+
+   ARCHS := $(shell sed -e "/^\#/d" ./ARCHS)
+   # ARCHS = amd64 i386 end
+
+
+LightScribe Labeler
+-------------------
+
+`LACIE <http://www.lacie.com/>`_
+
+Install LightScribe Host Software at first!!!
+Next, install LaCie LightScribe Labeler.
+::
+
+   su -
+   aptitude install alien
+   mv LaCie\ LightScribe\ Labeler\ version\ Linux.rpm \
+   LaCie-LightScribe-Labeler-version-Linux.rpm
+   alien LaCie-LightScribe-Labeler-version-Linux.rpm
+   dpkg --install LaCie-LightScribe-Labeler-version-Linux.deb
+   4L-gui many-labels/label/architecture/media/filename.png
+
+
+License of logos and trademarks
+-------------------------------
+
+| `Debian <https://www.debian.org/logos/>`_
+| `Ubuntu <https://wiki.ubuntu.com/Artwork/Official>`_
+
+
+TODO
+----
+
+.. todo:: I don't know why make command is interrupted when the last target is executed.
+
+
+About this document
+-------------------
+
+This README was written in reStructuredText(reST).
+
+| `SPHINX <http://sphinx-doc.org/>`_
+| `Project page <https://launchpad.net/many-labels>`_
+| `Please visit my home page <http://akuroiwa.env-reform.com/>`_

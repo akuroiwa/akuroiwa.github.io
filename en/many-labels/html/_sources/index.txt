@@ -26,7 +26,7 @@ Labels for Debian CDs and DVDs
 
 There are so many CDs of Debian, it takes a frustratingly long time to
 create their
-labels!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+labels!!!!!!!!
 
 I named my makefile script "many-labels" in gratitude and
 sardonically. Before cursing Debian CD Group, let's try this
@@ -68,11 +68,11 @@ add these strings to "debian.svg" and comment out them:
 They will be replaced as follows:
 ::
 
-   8.0.0
-   Jessie
+   9.0.0
+   Stretch
    amd64
-   CD
-   Disc 85
+   DVD
+   Disc 14
 
 
 Usage
@@ -82,9 +82,10 @@ Please choose from the following options:
 ::
 
    cd many-labels/
+   make
    make all
    make translations
-   make translations VERSION=5.0.7 CODE_NAME=Lenny
+   make translations VERSION=9.0.0 CODE_NAME=Stretch UBUNTU_VERSION_NUM=17.04
    (If you want to create ubuntu labels for Japanese remix)
    make translations LNG=ja
    (If you want to create tarball)
@@ -137,4 +138,4 @@ This README was written in reStructuredText(reST).
 
 | `SPHINX <http://sphinx-doc.org/>`_
 | `Project page <https://launchpad.net/many-labels>`_
-| `Please visit my home page <http://akuroiwa.env-reform.com/>`_
+| `Please visit my home page <http://akuroiwa.github.io/>`_
